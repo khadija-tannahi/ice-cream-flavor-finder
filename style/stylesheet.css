@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+
+/*
+
+
+body{
+  
+  background-color: black;
+  background-image: url('../images/background-2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+*/
+
+
+body {
+  background-color: #C4F1F1; 
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+
+.title {
+  font-size: 3em;
+  font-family: "Acme", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin-top: 150px;
+  color: #F98AAC; 
+  animation: bounce 1.5s infinite ease-in-out;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-10px);
+  }
+  60% {
+      transform: translateY(-5px);
+  }
+}
+
+h3 {
+  margin-top: 1.5rem;
+  font-family: "Acme", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.6rem;
+  color: #208175; 
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+h3:hover{
+  color: #1a635a;
+  transform: scale(1.05);
+}
+
+
+.suggestion-card {
+ 
+  background-color: #F1E16F; 
+  border-radius: 15px;
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  border: 4px solid;
+  animation: borderColorChange 8s infinite;
+  transition: transform 0.3s ease;
+}
+
+.suggestion-card:hover { 
+  transform:  scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes borderColorChange {
+  0% { 
+    border-color: #FFB3C8; 
+  }
+
+  25% { 
+    border-color: #ace9c5; 
+  }
+
+  50% { 
+    border-color: #8EC5FC; 
+  }
+
+  75% { 
+    border-color: #C7F0D8; 
+  }
+
+  100% { 
+    border-color: #F1A66F; 
+   }
+
+}
+
+
+.suggestion-card img {
+  position: absolute;
+  bottom: 10px;
+  right: 0px;
+  width: 90px;
+  height: auto;
+ 
+}
+
+.suggestion-card p {
+  font-size: 1.2rem;
+  font-family: "Acme", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: black;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+
+#txtHint {
+  font-size: 1.2em;
+  font-family: "Acme", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: black; 
+  
+}
+
+input {
+  width: 100%;
+  max-width: 350px;
+  margin-left: 20px;
+  padding: 10px;
+  border: 2px solid #F1A66F; 
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: "Acme", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #F98AAC; 
+  background-color: #FFB3C8; 
+}
+
+input:focus {
+  outline: none;
+  border-color: #F98AAC; 
+  background-color: #fff;
+}
+
+
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5em;
+    margin-top: 120px;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  .suggestion-card {
+    width: 95%;
+    padding: 15px;
+  }
+
+  input {
+    max-width: 300px;
+    font-size: 0.9em;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 2em;
+    margin-top: 100px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .suggestion-card {
+    width: 80%;
+    padding: 10px;
+  }
+
+  input {
+    max-width: 250px;
+    font-size: 0.85em;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .title {
+    font-size: 1.8em;
+    margin-top: 80px;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  .suggestion-card {
+    padding: 8px;
+  }
+
+  input {
+    max-width: 200px;
+    font-size: 0.8em;
+  }
+}
+
+
+

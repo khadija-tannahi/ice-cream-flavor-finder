@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ice Cream Flavors</title>
+
+  <link rel="stylesheet" href="style/stylesheet.css">
+</head>
+<body>
+
+  <h1 class="title">Discover Delicious Ice Cream Flavors</h1>
+
+ 
+
+  <div class="suggestion-card">
+
+    <h3>Start typing an ice cream flavor in the input field below:</h3>
+
+    <img src="images/icecream.png" alt="ice cream">
+
+    <p>Suggestions: <span id="txtHint"></span></p> 
+    <br> <br>
+    <p>Flavor: <input type="text" id="txt1" onkeyup="showHint(this.value)"></p>
+  </div>
+
+<script>
+  function showHint(str) {
+    if (str.length == 0) { 
+      document.getElementById("txtHint").innerHTML = "";
+      return;
+    }
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function() {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    }
+    xhttp.open("GET", "gethint.php?q=" + str);
+    xhttp.send();   
+  }
+</script>
+  
+</body>
+</html>

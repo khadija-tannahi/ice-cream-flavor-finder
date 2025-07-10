@@ -26,3 +26,8 @@ This is a lightweight, interactive web application that suggests unique ice crea
 4. Suggestions display instantly below the input box.
 
 ---
+
+## Live Demo
+
+[https://www.bdcteach.com/cmt228/khadija/ICreamFlav-KT/](https://www.bdcteach.com/cmt228/khadija/ICreamFlav-KT/)
+
